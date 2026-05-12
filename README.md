@@ -8,6 +8,7 @@ The project includes:
 - Kafka event publishing and consuming
 - Dockerized setup using Docker Compose
 - EC2 deployment support
+- Postman Collection
 
 ---
 
