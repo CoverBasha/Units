@@ -1,4 +1,4 @@
-const ItemRepository = require("../../domain/Item/ItemRepository");
+const ItemRepository = require("../../Domain/Item/ItemRepository");
 const ItemModel = require("../Database/ItemModel");
 
 class MongoItemRepository extends ItemRepository {

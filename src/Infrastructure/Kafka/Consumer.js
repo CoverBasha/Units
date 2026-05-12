@@ -1,8 +1,9 @@
 const Kafka = require("kafkajs").Kafka;
+require("dotenv").config();
 
 const kafka = new Kafka({
   clientId: "items-consumer",
-  brokers: ["localhost:9092"]
+  brokers: [process.env.KAFKA_BROKER]
 });
 
 const consumer = kafka.consumer({
