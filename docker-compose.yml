@@ -1,9 +1,8 @@
 services:
   api:
     build: .
-
     container_name: items-api
-
+    restart: unless-stopped
     ports:
       - "3000:3000"
 
@@ -26,6 +25,7 @@ services:
   zookeeper:
     image: confluentinc/cp-zookeeper:7.4.0
     container_name: zookeeper
+    restart: unless-stopped
 
     environment:
       ZOOKEEPER_CLIENT_PORT: 2181
@@ -37,7 +37,7 @@ services:
   kafka:
     image: confluentinc/cp-kafka:7.4.0
     container_name: kafka
-
+    restart: unless-stopped
     depends_on:
       - zookeeper
 
